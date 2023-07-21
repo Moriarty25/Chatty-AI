@@ -1,0 +1,29 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea,
+p {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; 
+}

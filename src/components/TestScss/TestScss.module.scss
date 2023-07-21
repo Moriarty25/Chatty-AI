@@ -1,0 +1,14 @@
+@import "/src/styles/app.scss";
+
+.paragraph {
+  padding: 5px;
+  margin: 10px;
+  background-color: $colorBlueSky;
+  transition: all 500ms;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $colorBlueLight;
+    transition: all 500ms;
+  }
+}
