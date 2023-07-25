@@ -7,6 +7,8 @@ import AudioTranscription from './components/AudioTranscription/AudioTranscripti
 
 function App() {
 	const [count, setCount] = useState(0)
+
+
 	return (
 		<>
 			<div>

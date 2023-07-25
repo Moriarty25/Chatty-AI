@@ -10,22 +10,37 @@ export default function AudioTranscription() {
 
 	const [isRecording, setIsRecording] = useState(false)
 
+	const data = {
+		lang: 'ru',
+		file: mediaBlobUrl,
+	}
+
 	const handleStartRecording = () => {
 		setIsRecording(true)
 		startRecording()
 	}
 
-	const handleStopRecording = (e, data) => {
+	const handleStopRecording = (e) => {
 		e.preventDefault()
 		setIsRecording(false)
 		stopRecording()
+		const lang: string = 'ru'
+		const remotePath: string | null = mediaBlobUrl
 
-		apiSpeechFlow.createTranscription(data)
-			.then(() => {
-
-				}
-			})
-
+		fetch('https://api.speechflow.io/asr/file/v1/create', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				'keyId': 'bKsW0JDm6q2ACQv7',
+				'keySecret': 'cmzthZGIBWHN2B4m',
+			},
+			body: {
+				'lang': lang,
+				'remotePath': remotePath,
+			},
+		})
+			.then((response => response.json()))
+			.then(data => console.log(data))
 	}
 
 	return (
