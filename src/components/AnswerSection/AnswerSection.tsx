@@ -53,7 +53,7 @@ export const AnswerSection: FC<TAnswerSectionProps> = ({ storedValues }) => {
 
 							</div>
 							<div className="copy-icon">
-								<i className="fa-solid fa-copy">32</i>
+								<i className="fa-solid fa-copy"></i>
 							</div>
 						</div>
 					)
