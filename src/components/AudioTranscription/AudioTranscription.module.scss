@@ -1,0 +1,30 @@
+
+.audio {
+  width: 300px;
+  height: 200px;
+}
+
+.text {
+  resize: none;
+}
+
+.request {
+  background-color: #07b4c5;
+}
+
+.startRecord {
+  display: block;
+}
+
+.startRecordNoVisible {
+  display: none;
+}
+
+.stopRecord {
+  display: none;
+}
+
+.stopRecordVisible {
+  display: block;
+}
+

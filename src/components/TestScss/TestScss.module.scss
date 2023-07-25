@@ -1,4 +1,4 @@
-@import "/src/styles/app.scss";
+@import '/src/styles/app.scss';
 
 .paragraph {
   padding: 5px;
@@ -11,4 +11,13 @@
     background-color: $colorBlueLight;
     transition: all 500ms;
   }
+}
+
+.audio {
+  width: 300px;
+  height: 200px;
+}
+
+textarea {
+  resize: none;
 }
