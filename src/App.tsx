@@ -2,7 +2,6 @@ import { Dispatch, SetStateAction, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { TestScss } from './components/TestScss/TestScss'
 import { Main } from './pages/Main/Main'
 import { FormSection } from './components/FormSection/FormSection'
 import { AnswerSection, TStoredValues } from './components/AnswerSection/AnswerSection'
@@ -12,8 +11,7 @@ function App() {
 
 	const [count, setCount] = useState(0)
 	const [storedValues, setStoredValues] = useState<Array<TStoredValues>>([]);
-	console.log( 'env');
-	//8-911-926-62-88
+
 	const configuration = new Configuration({
 		apiKey: import.meta.env.VITE_REACT_APP_OPENAI_API_KEY,
 	});
@@ -40,7 +38,6 @@ function App() {
 		};
 		const response = await openai.createCompletion(completeOptions);
 
-		// console.log(response.data.choices[0].text);
 		if (response.data.choices) {
 			setStoredValues([
 				{

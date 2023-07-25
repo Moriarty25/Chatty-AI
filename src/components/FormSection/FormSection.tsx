@@ -5,7 +5,7 @@ type TFormSectionProps = {
 	generateResponse: (
 		newQuestion: string, 
 		setNewQuestion: Dispatch<SetStateAction<string>>
-		) => void;
+		) => void
 }
 
 export const FormSection: FC<TFormSectionProps> = ({ generateResponse }) => {
