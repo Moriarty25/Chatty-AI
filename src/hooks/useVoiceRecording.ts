@@ -1,5 +1,5 @@
 
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 async function requestRecorder() {
 	const stream = await navigator.mediaDevices.getUserMedia({audio: true})
@@ -7,42 +7,35 @@ async function requestRecorder() {
 }
 
 export default function useVoiceRecording() {
-	const [voice, setVoice] = useState([])  // стейт переменная, куда сохраняем запись
+	const [voice, setVoice] = useState<Blob | null >(null)  
 	const [isRecording, setIsRecording] = useState(false)
-	const [recorder, setRecorder] = useState(null)
+	const [recorder, setRecorder] = useState<MediaRecorder | null>(null)
 
 	useEffect(() => {
-		if (recorder === null) {
-			if (isRecording) {
-				requestRecorder().then(setRecorder);
-			}
-			return;
-		}
-		console.log(recorder)
+		requestRecorder().then((mediaRecorder) => {
+			setRecorder(mediaRecorder)
 
-		if (isRecording) {
-			recorder.start();
-		} else {
-			recorder.stop();
-		}
-
-		recorder.addEventListener('dataavailable', (e) => {
-			setVoice(e.data)
-		})
-
-		return () => recorder.removeEventListener('dataavailable', (e) => {
-			setVoice(e.data)
-		})
-
-	}, [recorder, isRecording])
-
-	function startRecording(){
+			mediaRecorder.addEventListener('dataavailable', (e: BlobEvent) => {
+				setVoice(e.data)
+			});
+		});
+	}, [])
+	
+	const startRecording = useCallback(() => {
+		if (!recorder) return
+		
 		setIsRecording(true);
-	}
+		recorder.start();
 
-	function stopRecording(){
+	}, [recorder, setIsRecording])
+
+	const stopRecording = useCallback(() => {
+		if (!recorder) return
+
+		recorder.stop();
 		setIsRecording(false);
-	}
+	
+	}, [recorder, setIsRecording])
 
 	return {voice, isRecording, startRecording, stopRecording};
 }
