@@ -5,6 +5,7 @@ import useVoiceRecording from '../../hooks/useVoiceRecording.ts';
 import viteLogo from '/vite.svg';
 // import {useReactMediaRecorder} from 'react-media-recorder'
 import axios from 'axios';
+import { convertWebMToWAV } from '../../pages/Main/SpeechToText/SpeechToText.tsx';
 
 export default function AudioTranscription() {
 	const {voice, isRecording, startRecording, stopRecording} = useVoiceRecording()
@@ -12,13 +13,20 @@ export default function AudioTranscription() {
 	useEffect(() => {
 		console.log(voice, ' VOICE from Effect')
 	}, [voice])
+
+	function onAudio() {
+		if (!voice) return
+		convertWebMToWAV(new File([new Blob([voice])], 'file'))
+	}
 	
 	function transcriptVoiceInText() {
 		const formData = new FormData()
 		if (voice !== null) {
 			formData.append('file', voice)
 			formData.append('lang', 'ru')
-	
+			const f= onAudio()
+			console.log(f);
+			
 			axios.post('https://api.speechflow.io/asr/file/v1/create', formData, {
 				headers: {
 					'Content-Type': 'multipart/form-data',
@@ -46,6 +54,7 @@ export default function AudioTranscription() {
 	return (
 		<>
 			<>
+			
 				<textarea className={styles.text} readOnly name="result" value='res' />
 				{/* eslint-disable-next-line max-len */}
 				<button type="button" className={!isRecording ? `${styles.startRecord}` : `${styles.startRecordNoVisible}`} onClick={startRecording}>Start</button>
@@ -55,6 +64,7 @@ export default function AudioTranscription() {
 					type: 'audio/wav',
 				}))} controls />
 				<button onClick={transcriptVoiceInText}>transcriptVoiceInText</button>
+				{/* <button onClick={onAudio}>audio</button> */}
 			</>
 		</>
 	)

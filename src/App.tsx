@@ -8,6 +8,7 @@ import { AnswerSection, TStoredValues } from './components/AnswerSection/AnswerS
 import { Configuration, OpenAIApi } from 'openai'
 import { TestScss } from './components/TestScss/TestScss'
 import AudioTranscription from './components/AudioTranscription/AudioTranscription.tsx';
+import SpeechToText from './pages/Main/SpeechToText/SpeechToText.tsx'
 
 function App() {
 
@@ -53,7 +54,6 @@ function App() {
 
 	};
 
-
 	return (
 		<>
 			<div>
@@ -79,7 +79,9 @@ function App() {
 			<p className="read-the-docs">
         Click on the Vite and React logos to learn more
 			</p> */}
-			<Main />
+			{/* <Main /> */}
+			{/* <SpeechToText/> */}
+			{<AudioTranscription/>}
 			<FormSection generateResponse={generateResponse}/>
 			<AnswerSection storedValues={storedValues}/>
 		</>

@@ -33,6 +33,8 @@ export const Main: React.FC = () => {
 		const recognition = new (window as any).webkitSpeechRecognition();
 		recognition.stop();
 		setListening(false);
+		console.log('stop');
+		
 	};
 
 	return (
