@@ -1,0 +1,53 @@
+@import "/src/styles/app.scss";
+
+.container {
+  @include flexCenter;
+
+  flex-direction: column;
+  margin: 5px auto;
+  border-top: 1px solid $colorWhiteSmoke;
+  padding-top: 25px;
+  max-width: 300px;
+  font-size: large;
+}
+
+.section {
+  border-color: $colorBlueWhite;
+  position: relative;
+}
+
+.question {
+  @include flexCenter;
+
+  background-color: rgb(220, 32, 148);
+  min-height: 40px;
+}
+
+.answer {
+  @include flexCenter;
+
+  justify-content: start;
+  background-color: rgb(44, 44, 44);
+  color: $colorBlueWhite;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+.speaker {
+  width: 20px;
+  color: $colorBlueLight;
+  position: absolute;
+  bottom: 28px;
+  right: 20px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &_icon {
+    width: 20px;
+    fill: $colorWhiteSmoke;
+    stroke: rgb(220, 32, 148);
+  }
+}

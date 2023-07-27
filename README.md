@@ -1,5 +1,7 @@
 # Chatty AI
 
+## https://inquisitive-beignet-f562cd.netlify.app/
+
 ## run in development mode
 
 ``` 
