@@ -28,5 +28,6 @@ module.exports = {
 		'@typescript-eslint/ban-ts-comment': 'warn',
 		'@typescript-eslint/quotes': ['error', 'single'],
 		'@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/no-explicit-any': 'warn',
   },
 }
