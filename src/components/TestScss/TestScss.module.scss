@@ -5,6 +5,8 @@
   margin: 10px;
   background-color: $colorBlueSky;
   transition: all 500ms;
+  font-family: 'Noto Light', sans-serif;
+  font-weight: 500;
 
   &:hover {
     cursor: pointer;

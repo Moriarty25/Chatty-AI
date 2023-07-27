@@ -1,3 +1,17 @@
-@import 'variables.scss';
-@import 'reset.scss';
-@import 'mixins.scss';
+@import "variables.scss";
+@import "reset.scss";
+@import "mixins.scss";
+
+@font-face {
+    font-family: 'Noto Regular';
+    src: url("/src/assets/fonts/NotoSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'Noto Light';
+    src: url("/src/assets/fonts/NotoSans-Light.ttf");
+}
+@font-face {
+    font-family: 'Noto Black';
+    src: url("/src/assets/fonts/NotoSans-Black.ttf");
+}
+

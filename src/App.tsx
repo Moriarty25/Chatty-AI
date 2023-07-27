@@ -7,6 +7,7 @@ import { Main } from './pages/Main/Main'
 import { FormSection } from './components/FormSection/FormSection'
 import { AnswerSection, TStoredValues } from './components/AnswerSection/AnswerSection'
 import { Configuration, OpenAIApi } from 'openai'
+import { TestScss } from './components/TestScss/TestScss'
 
 function App() {
 
@@ -75,6 +76,7 @@ function App() {
 			<p className="read-the-docs">
         Click on the Vite and React logos to learn more
 			</p> */}
+			<TestScss text='Demo variables scss!'/>	
 			<Main />
 			<FormSection generateResponse={generateResponse}/>
 			<AnswerSection storedValues={storedValues}/>
