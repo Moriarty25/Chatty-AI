@@ -6,6 +6,7 @@
   align-items: flex-start;
   border-radius: 20px;
   background: $colorBackgroundSnow;
+  background: #E9E9EB;
   color: $colorTextBlack;
   max-width: 402px;
   min-width: 202px;
@@ -18,6 +19,7 @@
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.16px;
+  text-align: left;
 }
 
 .question {
@@ -28,11 +30,11 @@
 
 .arrow {
   position: absolute;
-  bottom: -5px;
-  left: -1px;
+  bottom: -6px;
+  left: -2px;
   width: 11px;
   height: 20px;
   flex-shrink: 0;
-  fill: $colorBackgroundSnow;
-  stroke: $colorBackgroundSnow;
+  fill: #E9E9EB;
+  stroke: #E9E9EB;
 }

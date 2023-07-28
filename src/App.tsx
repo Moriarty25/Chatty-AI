@@ -12,6 +12,7 @@ import { Input } from './components/Input/Input'
 import { VoiceInput } from './components/VoiceInput/VoiceInput'
 import { Title } from './components/Title/Title'
 import { Message } from './components/Message/Message'
+import { Home } from './pages/Home/Home'
 
 function App() {
 
@@ -59,14 +60,14 @@ function App() {
 
 	return (
 		<>
-			<div>
+			{/* <div>
 				<a href="https://vitejs.dev" target="_blank">
 					<img src={micro} className="logo" alt="Vite logo" />
 				</a>
 				<a href="https://react.dev" target="_blank">
 					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
-			</div>
+			</div> */}
 			{/* <h1>Vite + React</h1>
 			<div className="card">
 				<button onClick={() => setCount((count) => count + 1)}>
@@ -80,15 +81,16 @@ function App() {
 			<p className="read-the-docs">
         Click on the Vite and React logos to learn more
 			</p> */}
-			<Main />
-			<Title />
-			<Message text='BWWFWo' isOwner={false}/>
+			{/* <Main /> */}
+			{/* <Title /> */}
+			<Home/>
+			{/* <Message text='BWWFWo' isOwner={false}/>
 			<FormSection generateResponse={generateResponse}/>
 			<AnswerSection storedValues={storedValues}/>
 			<Button text='Продолжить' view='primary'/>
 			<Input placeholder='Сообщение'/>
 			<Button text='Продолжить' view='secondary'/>
-			<VoiceInput />
+			<VoiceInput /> */}
 		</>
 	)
 }
