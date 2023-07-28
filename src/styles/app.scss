@@ -3,15 +3,26 @@
 @import "mixins.scss";
 
 @font-face {
-    font-family: 'Noto Regular';
-    src: url("/src/assets/fonts/NotoSans-Regular.ttf");
+  font-family: "Noto Regular";
+  src: url("/src/assets/fonts/NotoSans-Regular.ttf");
 }
 @font-face {
-    font-family: 'Noto Light';
-    src: url("/src/assets/fonts/NotoSans-Light.ttf");
+  font-family: "Noto Light";
+  src: url("/src/assets/fonts/NotoSans-Light.ttf");
 }
 @font-face {
-    font-family: 'Noto Black';
-    src: url("/src/assets/fonts/NotoSans-Black.ttf");
+  font-family: "Noto Black";
+  src: url("/src/assets/fonts/NotoSans-Black.ttf");
 }
+@font-face {
+  font-family: "Noto Title";
+  src: url("/src/assets/fonts/Noto");
+}
+@font-face {
+    font-family: "Noto Medium";
+    src: url("/src/assets/fonts/NotoSans-Medium.ttf");
+  }
 
+body {
+  background-color: $colorBackgroundSmoke;
+}

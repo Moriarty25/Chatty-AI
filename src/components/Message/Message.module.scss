@@ -1,0 +1,38 @@
+@import "/src/styles/app.scss";
+
+.message {
+  display: flex;
+  padding: 6px 12px;
+  align-items: flex-start;
+  border-radius: 20px;
+  background: $colorBackgroundSnow;
+  color: $colorTextBlack;
+  max-width: 402px;
+  min-width: 202px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  position: relative;
+  font-family: "Noto Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+}
+
+.question {
+  background: #dee7ff;
+  color: $colorTextBlack;
+  text-align: right;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -5px;
+  left: -1px;
+  width: 11px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: $colorBackgroundSnow;
+  stroke: $colorBackgroundSnow;
+}

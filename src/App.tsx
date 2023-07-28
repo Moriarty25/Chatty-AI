@@ -7,7 +7,11 @@ import { Main } from './pages/Main/Main'
 import { FormSection } from './components/FormSection/FormSection'
 import { AnswerSection, TStoredValues } from './components/AnswerSection/AnswerSection'
 import { Configuration, OpenAIApi } from 'openai'
-import { TestScss } from './components/TestScss/TestScss'
+import { Button } from './components/Button/Button'
+import { Input } from './components/Input/Input'
+import { VoiceInput } from './components/VoiceInput/VoiceInput'
+import { Title } from './components/Title/Title'
+import { Message } from './components/Message/Message'
 
 function App() {
 
@@ -76,10 +80,15 @@ function App() {
 			<p className="read-the-docs">
         Click on the Vite and React logos to learn more
 			</p> */}
-			<TestScss text='Demo variables scss!'/>	
 			<Main />
+			<Title />
+			<Message text='BWWFWo' isOwner={false}/>
 			<FormSection generateResponse={generateResponse}/>
 			<AnswerSection storedValues={storedValues}/>
+			<Button text='Продолжить' view='primary'/>
+			<Input placeholder='Сообщение'/>
+			<Button text='Продолжить' view='secondary'/>
+			<VoiceInput />
 		</>
 	)
 }
