@@ -6,7 +6,7 @@ type TVoiceInput = {
     disabled?: boolean
 }
 
-export const VoiceInput: FC<TVoiceInput> = ({active=true, disabled}) => {
+export const VoiceInput: FC<TVoiceInput> = ({active, disabled}) => {
 	return (
 		<div className={active ? `${styles.wrap} ${styles.active}` : 
 			disabled ?  `${styles.wrap} ${styles.disabled}` :

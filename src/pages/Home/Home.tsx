@@ -4,6 +4,8 @@ import { Switch } from '../../components/Switch/Switch';
 import { Title } from '../../components/Title/Title';
 import styles from './Home.module.scss';
 import { Bubble } from '../../components/Bubble/Bubble';
+import { Input } from '../../components/Input/Input';
+import { VoiceInput } from '../../components/VoiceInput/VoiceInput';
 
 export const Home = () => {
 	const [activePage, setActivePage] = useState(0);
@@ -23,7 +25,7 @@ export const Home = () => {
 				/>
 			</header>
 
-			<main>
+			<main className={styles.main}>
 				<Switch
 					titles={['Поиск', 'Задачи']}
 					active={activePage}
@@ -38,14 +40,25 @@ export const Home = () => {
 				/>
 				<div className={styles.bubbles}>
 					<Bubble text="Я хочу есть, что можно быстро приготовить?" />
-					<Bubble
-						text="Я хочу посмотреть фильм, какой порекомендуешь? "
-					/>
-					<Bubble text='Напиши интересные факты о козах.'/>
+					<Bubble text="Лучший документальный фильм о козах" />
+					<Bubble text="Напиши интересные факты о козах." />
 				</div>
 			</main>
-			<footer>
-				
+			<footer className={styles.footer}>
+				<div className={styles.control}>
+					<Input placeholder="Сообщение" />
+					<img className={styles.send} src="/src/assets/send.svg" alt="send" />
+				</div>
+				<div className={styles.voice}>
+					<div className={styles.inner}>
+						<VoiceInput />
+						<img
+							className={styles.keyboard}
+							src="/src/assets/keyboard.svg"
+							alt="keyboard"
+						/>
+					</div>
+				</div>
 			</footer>
 		</>
 	);
