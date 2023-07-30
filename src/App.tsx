@@ -17,6 +17,7 @@ import { Home } from './pages/Home/Home'
 function App() {
 
 	const [count, setCount] = useState(0)
+
 	const [storedValues, setStoredValues] = useState<Array<TStoredValues>>([]);
 
 	const configuration = new Configuration({
@@ -70,13 +71,13 @@ function App() {
 			</div> */}
 			{/* <h1>Vite + React</h1>
 			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
+				<button onClick={() => setLanguage('Русский')}>
           count is {count}
 				</button>
 				<p>
           Edit <code>src/App.tsx</code> and save to test HMR
 				</p>
-				<TestScss text='Demo variables scss!'/>
+				<TestScss text={language}/>
 			</div>
 			<p className="read-the-docs">
         Click on the Vite and React logos to learn more
