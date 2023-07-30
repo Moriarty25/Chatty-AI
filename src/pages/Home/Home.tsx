@@ -4,19 +4,18 @@ import { Switch } from '../../components/Switch/Switch';
 import { Title } from '../../components/Title/Title';
 import styles from './Home.module.scss';
 import { Bubble } from '../../components/Bubble/Bubble';
-import { VoiceInput } from '../../components/VoiceInput/VoiceInput';
 import { useOpenai } from '../../services/openai';
 import { FormSection } from '../../components/FormSection/FormSection';
+import { v4 as uuidv4 } from 'uuid';
 
 export const Home = () => {
 	const [activePage, setActivePage] = useState(0);
+	const { storedValues, generateResponse, status } = useOpenai();
 
 	function toggleSwitch(index: number) {
 		setActivePage(index);
 	}
-	const {storedValues, generateResponse, status} = useOpenai()
-	console.log(status);
-	
+
 	return (
 		<>
 			<header className={styles.header}>
@@ -26,7 +25,6 @@ export const Home = () => {
 					src="/src/assets/setting.svg"
 					alt="settings"
 				/>
-				
 			</header>
 			<Switch
 				titles={['Поиск', 'Задачи']}
@@ -34,15 +32,14 @@ export const Home = () => {
 				toggleSwitch={toggleSwitch}
 			/>
 			<main className={styles.main}>
-
 				<div className={styles.container}>
-					{storedValues.map((value, index) => {
+					{storedValues.map((value) => {
 						return (
 							<>
-								<Message key={index} isOwner={false} text={value.answer}/>
-								<Message key={index} isOwner text={value.question}/>
+								<Message key={uuidv4()} isOwner={false} text={value.answer} />
+								<Message key={uuidv4()} isOwner text={value.question} />
 							</>
-						)
+						);
 					})}
 				</div>
 				<div className={styles.bubbles}>
@@ -52,17 +49,7 @@ export const Home = () => {
 				</div>
 			</main>
 			<footer className={styles.footer}>
-				<FormSection generateResponse={generateResponse}/>
-				<div className={styles.voice}>
-					<div className={styles.inner}>
-						<VoiceInput />
-						<img
-							className={styles.keyboard}
-							src="/src/assets/keyboard.svg"
-							alt="keyboard"
-						/>
-					</div>
-				</div>
+				<FormSection generateResponse={generateResponse} />
 			</footer>
 		</>
 	);

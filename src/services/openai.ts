@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, useState } from 'react';
 import { TStoredValues } from '../components/AnswerSection/AnswerSection';
 
 export const useOpenai = () => {
-	const [storedValues, setStoredValues] = useState<Array<TStoredValues>>([]);
+	const [storedValues, setStoredValues] = useState<Array<TStoredValues>>([])
 	const [status, setStatus] = useState(0)
 
 	const configuration = new Configuration({

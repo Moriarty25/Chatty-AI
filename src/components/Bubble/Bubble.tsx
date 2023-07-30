@@ -3,7 +3,8 @@ import styles from './Bubble.module.scss';
 
 type TBubbleProps = {
   text: string;
-};
+  onClick?: (text: string) => void
+}
 
 export const Bubble: FC<TBubbleProps> = ({ text }) => {
 	return (
