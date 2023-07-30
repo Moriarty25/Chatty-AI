@@ -31,13 +31,17 @@ export const Home = () => {
 					active={activePage}
 					toggleSwitch={toggleSwitch}
 				/>
-				<Message
+				{/* <Message
 					isOwner={false}
 					text={
 						// eslint-disable-next-line max-len
 						'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, nulla possimus nostrum delectus itaque repellat quisquam laborum totam recusandae doloribus vero reiciendis molestias architecto unde minima aperiam ipsum commodi autem.'
 					}
-				/>
+				/> */}
+				<div className={styles.container}>
+					<div className={styles.avatar}></div>
+					<Message text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, nulla possimus nostrum delectus itaque repellat quisquam laborum totam recusandae doloribus vero reiciendis molestias architecto unde minima aperiam ipsum commodi autem.'/>
+				</div>
 				<div className={styles.bubbles}>
 					<Bubble text="Я хочу есть, что можно быстро приготовить?" />
 					<Bubble text="Лучший документальный фильм о козах" />

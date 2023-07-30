@@ -21,7 +21,6 @@ export const Message: FC<TMessageProps> = ({text, isOwner}) => {
                     18.1842 -0.88685 19.5813 0.11315 20.1846Z" fill='#E9E9EB'
 					/>
 				</svg>}
-                
 			</div>
 			
 		</>

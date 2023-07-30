@@ -28,6 +28,10 @@
   text-align: right;
 }
 
+.message:not(.question) {
+  margin-left: 8px;
+}
+
 .arrow {
   position: absolute;
   bottom: -6px;
@@ -37,4 +41,14 @@
   flex-shrink: 0;
   fill: #E9E9EB;
   stroke: #E9E9EB;
+}
+
+.avatar {
+  position: absolute;
+  bottom: -30px;
+  left: -15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: $colorHardCoal;
 }
