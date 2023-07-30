@@ -1,3 +1,41 @@
-@import 'variables.scss';
-@import 'reset.scss';
-@import 'mixins.scss';
+@import "variables.scss";
+@import "reset.scss";
+@import "mixins.scss";
+
+@font-face {
+  font-family: "Noto Regular";
+  src: url("/src/assets/fonts/NotoSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Noto Light";
+  src: url("/src/assets/fonts/NotoSans-Light.ttf");
+}
+@font-face {
+  font-family: "Noto Black";
+  src: url("/src/assets/fonts/NotoSans-Black.ttf");
+}
+@font-face {
+  font-family: "Noto Title";
+  src: url("/src/assets/fonts/Noto");
+}
+@font-face {
+  font-family: "Noto Medium";
+  src: url("/src/assets/fonts/NotoSans-Medium.ttf");
+}
+
+body {
+  background-color: $colorPlatinum;
+
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $colorBackgroundSmoke;
+    border-radius: 10px;
+    border: 3px solid $colorBackgroundSnow;
+  }
+  *::-webkit-scrollbar-track {
+    background: var(--colorBlueWhite);
+  }
+}

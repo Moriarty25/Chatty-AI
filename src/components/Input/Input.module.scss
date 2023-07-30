@@ -1,0 +1,27 @@
+@import "/src/styles/app.scss";
+
+.input {
+  display: flex;
+  align-items: center;
+  width: 346px;
+  padding: 10px 8px;
+  gap: 12px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #E9E9EB;
+  border: none;
+  outline: 2px solid #E9E9EB;
+  transition: all 250ms;
+
+  &:focus,
+  &:focus-visible {
+    transition: all 250ms;
+    outline: 2px solid $colorPlatinum;
+  }
+
+  &:placeholder-shown {
+    padding-left: 8px;
+    color: $colorTextBasaltGray;
+  }
+}

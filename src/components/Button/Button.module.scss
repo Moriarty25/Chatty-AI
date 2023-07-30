@@ -1,0 +1,50 @@
+@import "/src/styles/app.scss";
+
+.button {
+  @include flexCenter;
+
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 250ms;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.18px;
+  width: 288px;
+}
+
+.primary {
+  background: $colorPrimary;
+  color: $colorTextWhite;
+  outline: 1px solid $colorPrimary;
+  box-shadow: 0px 4px 8px 0px #c2d7ff;
+
+  &:hover {
+    transition: all 250ms;
+    background: $colorAqua;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.secondary {
+  background: $colorBackgroundSmoke;
+  color: $colorTextBlack;
+  
+
+  &:hover {
+    transition: all 250ms;
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
