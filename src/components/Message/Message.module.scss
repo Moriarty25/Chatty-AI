@@ -9,9 +9,8 @@
   background: #E9E9EB;
   color: $colorTextBlack;
   max-width: 402px;
-  min-width: 202px;
+  // min-width: 202px;
   word-break: break-word;
-  white-space: pre-wrap;
   position: relative;
   font-family: "Noto Medium";
   font-size: 16px;
@@ -20,12 +19,16 @@
   line-height: 20px;
   letter-spacing: 0.16px;
   text-align: left;
+  margin-right: auto ;
 }
 
 .question {
   background: #dee7ff;
   color: $colorTextBlack;
   text-align: right;
+  margin-left: auto;
+  margin-right: 20px;
+  
 }
 
 .message:not(.question) {

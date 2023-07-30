@@ -1,19 +1,18 @@
 @import "/src/styles/app.scss";
 
-.form {
+.control {
   @include flexCenter;
 
-  flex-direction: column;
-  margin-top: 20px;
+  gap: 12px;
+  background-color: $colorBackgroundSnow;
 }
 
-.control {
-  margin: 10px;
-  height: 100px;
-  min-height: 50px;
-  min-width: 250px;
-  border-radius: 12px;
-  padding: 10px 20px 5px;
-  resize: vertical;
-  background-color: $colorWhite;
+.send {
+  cursor: pointer;
+  transition: all 250ms;
+
+  &:hover {
+    opacity: 0.7;
+    transition: all 250ms;
+  }
 }

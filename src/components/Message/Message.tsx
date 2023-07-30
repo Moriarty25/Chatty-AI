@@ -2,7 +2,7 @@ import { FC } from 'react'
 import styles from './Message.module.scss'
 
 type TMessageProps = {
-    text: string
+    text?: string
     isOwner: boolean
 }
 
