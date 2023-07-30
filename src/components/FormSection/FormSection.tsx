@@ -1,7 +1,6 @@
-import { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react';
+import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
 import styles from './FormSection.module.scss';
 import { Input } from '../Input/Input';
-import { useSpeechRecording } from '../../hooks/useSpeechRecordering';
 import { VoiceInput } from '../VoiceInput/VoiceInput';
 
 type TFormSectionProps = {
@@ -11,6 +10,7 @@ type TFormSectionProps = {
   ) => void;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let recognition: any = null;
 if ('webkitSpeechRecognition' in window) {
 	recognition = new webkitSpeechRecognition();
@@ -20,16 +20,6 @@ if ('webkitSpeechRecognition' in window) {
 
 export const FormSection: FC<TFormSectionProps> = ({ generateResponse }) => {
 	
-	// const {
-	// 	text,
-	// 	isRecording,
-	// 	startRecording,
-	// 	stopRecording,
-	// 	newQuestion,
-	// 	setNewQuestion,
-	// 	value,
-	// } = useSpeechRecording()
-	const [text, setText] = useState('')
 	const [isRecording, setIsRecording] = useState(false)
 	const [newQuestion, setNewQuestion] = useState('');
 

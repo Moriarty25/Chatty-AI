@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const Home = () => {
 	const [activePage, setActivePage] = useState(0);
-	const { storedValues, generateResponse, status } = useOpenai();
+	const { storedValues, generateResponse } = useOpenai();
 
 	function toggleSwitch(index: number) {
 		setActivePage(index);
