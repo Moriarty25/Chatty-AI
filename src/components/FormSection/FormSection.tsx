@@ -72,7 +72,7 @@ export const FormSection: FC<TFormSectionProps> = ({ generateResponse }) => {
 					value={newQuestion}
 					onChange={(e) => setNewQuestion(e.target.value)}
 				/>
-				<svg className={styles.svg} onClick={onOpenaiHandler} width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg className={styles.send} onClick={onOpenaiHandler} width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3.93072 15.0266L1.91073 21.7434C0.634092 25.9885 4.77831 29.7789 8.51983 27.7883L24.0514 19.5251C27.5352 17.6716 27.539 12.3736 24.0579 10.5145L8.51805 2.21533C4.77853 0.218215 0.628391 4.00397 1.90092 8.25147L3.93072 15.0266ZM3.93072 15.0266H8.88239" stroke="#4584FF" stroke-width="2.5" stroke-linecap="round"/>
 				</svg>
 
