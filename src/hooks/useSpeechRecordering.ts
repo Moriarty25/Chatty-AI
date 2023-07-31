@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import useLocalStorage from 'use-local-storage';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let recognition: any = null;
@@ -10,7 +9,7 @@ if ('webkitSpeechRecognition' in window) {
 }
 
 export const useSpeechRecording = () => {
-	const [text, setText] = useState('')
+	const [text] = useState('')
 	const [isRecording, setIsRecording] = useState(false)
 	const [newQuestion, setNewQuestion] = useState('');
 
